@@ -13,7 +13,7 @@ func main() {
     fmt.Println("Hello, World!");
 
     fmt.Printf("Unix timestamp:  %d \n", time.Now().Unix())
-    fmt.Printf("Right now is:  %s \n", carbon.Now().DateTimeString())
+    fmt.Printf("当前时间是:  %s \n", carbon.Now().DateTimeString())
 
     // 连接数据库
 	db, err := sql.Open("mysql", "homestead:secret@tcp(192.168.10.10:3306)/test")

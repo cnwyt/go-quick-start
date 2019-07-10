@@ -16,12 +16,14 @@ $ which go
 ```
 
 查看 go 语言安装版本: 
-目前安装的是 go1.12.4 版本:
 
 ```sh
 $ go version  
-go version go1.12.4 darwin/amd64
+go version go1.12.7 darwin/amd64
 ```
+
+可以看到，目前安装的是 go1.12.7 版本。
+
 
 ## 第一个 HelloWord 程序
 
@@ -74,7 +76,7 @@ $ go mod init github.com/cnwyt/go-quick-start
 go: creating new go.mod: module github.com/cnwyt/go-quick-start
 ```
 
-会生成一个 go.mod 文件，指明了模块名和go的版本: 
+会生成一个 go.mod 文件，指明了模块名和 go 的版本: 
 
 ```sh
 module github.com/cnwyt/go-quick-start
@@ -125,7 +127,8 @@ import "github.com/uniplaces/carbon"
 
 func main() {
     fmt.Println("Hello, World!");
-    fmt.Println("Right now is:  %s\n", carbon.Now().DateTimeString())
+    fmt.Printf("Unix timestamp:  %d \n", time.Now().Unix())
+    fmt.Printf("Right now is:  %s \n", carbon.Now().DateTimeString())
 }
 ```
 
@@ -134,7 +137,8 @@ func main() {
 ```sh
 $ go run main.go 
 Hello, World!
-Right now is:  2019-04-18 15:01:32
+Unix timestamp:  1562766341 
+当前时间是:  2019-07-10 21:45:41
 ```
 
 ## 使用第三方包操作 MySQL 数据库 
@@ -201,7 +205,10 @@ func main() {
 ```sh
 $ go run main.go
 Hello, World!
-Unix timestamp:  1555573130 
-Right now is:  2019-04-18 15:38:50 
+Unix timestamp:  1562766341 
+当前时间是:  2019-07-10 21:45:41
 ----> 数据库连接成功.
 ```
+
+
+[END]
